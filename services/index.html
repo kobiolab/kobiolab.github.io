@@ -1,202 +1,859 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
-<head>
-  <meta charset="utf-8">
-  <title>Services</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" type="image/png" href="/images/favicon-32x32.svg">
-  <!-- Google Fonts CDN -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Self host font -->
-  <!-- <link rel="preload" href="/assets/fonts/playfair-display.woff2" as="font" type="font/woff2" crossorigin> -->
-  <link href="/assets/css/style.css" rel="stylesheet">
-  
-  <meta name="description" content="Services" />
+    <title>Services - Kobiol</title>
+
+
+  <meta name="description" content="A selection of our digital services"/>
+
+
+
+    <meta property="og:type" content="website"/>
+<meta property="og:url" content="https://kobiolab.github.io//services/"/>
+
+
   <meta property="og:title" content="Services"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content=""/>
-  
-  <meta property="og:description" content="Services"/>
-  <meta name="twitter:card" content="summary"/>
-  
-  
 
-</head>
 
-<body class='page page-services'>
-  <div id="main-menu-mobile" class="main-menu-mobile">
+
+  <meta property="og:description" content="A selection of our digital services"/>
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@zerostaticio" />
+<meta name="twitter:creator" content="@zerostaticio" />
+    <link rel="alternate" type="application/atom+xml" title="Kobiol" href="/feed.xml">
+    <link rel="icon" href="/assets/images/favicon/favicon.png">
+
+
+    <link href="/assets/css/main.css" rel="stylesheet">
+
+    
+      <script>
+          localStorage.getItem('darkMode') === 'true' && document.documentElement.setAttribute('data-bs-theme', 'dark');
+      </script>
+    
+
+    
+
+    
+
+    <link href="/assets/css/fonts.css" rel="stylesheet">
+
+
+
+
+    
+
+  </head>
+<body class="page page-list has-fixed-header">
+
+
+<div class="menu-main-mobile " id="menu-main-mobile">
   
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
+    </div>
+  </div>
+
+  <div class="menu-main-mobile-center">
+    
+      <ul class="menu">
+        
+          <li class="menu-item-home">
+            <a href="/">Home</a>
+          </li>
+        
+          <li class="menu-item-servizi active ">
+            <a href="/services/">Servizi</a>
+          </li>
+        
+          <li class="menu-item-esami">
+            <a href="/projects/">Esami</a>
+          </li>
+        
+          <li class="menu-item-blog">
+            <a href="/blog/">Blog</a>
+          </li>
+        
+          <li class="menu-item-chi siamo">
+            <a href="/about/">Chi siamo</a>
+          </li>
+        
+      </ul>
+    
+  </div>
+
+  <div class="menu-main-mobile-bottom">
+    
+      
+
+<div class="social" id="social">
+  
+  <a href="https://www.zerostatic.io" target="blank" title="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+  
+  <a href="https://www.zerostatic.io" target="blank" title="Github">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="https://www.zerostatic.io" target="blank" title="Discord">
+    <i class="fab fa-discord"></i>
+  </a>
+  
+</div>
+
+
+    
+    
+      <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z"></path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;" version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z"></path>
+      </g>
+      <g>
+        <path d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z"></path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+    
+  </div>
+
+</div>
+
+
+
+
+<div id="header" class='header header-fixed header-transparent'>
+  <div class="container">
+    <div class="logos">
+  <div class="logo logo-desktop">
+    
+      <div class="logo-image">
+        <a href="/">
+          <img height="100px" width="140px" alt="Kobiol Logo" src="/assets/images/logo/logo.png"/>
+        </a>
+      </div>
+    
+  
+    
+    
+  </div>
+
+  <div class="logo logo-desktop-invert">
+    
+    
+      <div class="logo-image">
+        <a href="/">
+          <img height="100px" width="140px" alt="Kobiol Logo" src="/assets/images/logo/logo-invert.png"/>
+        </a>
+      </div>
+    
+  
+    
+    
+  </div>
+
+  <div class="logo logo-mobile">
+    
+    
+      <div class="logo-image">
+        <a href="/">
+          <img height="30px" width="34px" alt="Kobiol Logo" src="/assets/images/logo/logo-mobile.png"/>
+        </a>
+      </div>
+    
+  
+    
+    
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+    
+    
+      <div class="logo-image">
+        <a href="/">
+          <img height="30px" width="34px" alt="Kobiol Logo" src="/assets/images/logo/logo-invert-mobile.png"/>
+        </a>
+      </div>
+    
+  
+    
+
+  </div>
+
+</div>
+
+
+    <div class="menu-main">
   <ul>
     
-    <li class="active">
-      <a href="/services/">Servizi</a>
-    </li>
+      
+        
+        <li class=" ">
+          <a href="/" >Home</a>
+        </li>
+      
     
-    <li class="">
-      <a href="/team/">Team</a>
-    </li>
+      
+
+        
+        
+
+        <li class="menu-item-dropdown menu-item-Servizi active  ">
+          <a href="/services/">Servizi <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/services/analisi-lab/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Analisi di Laboratorio</div>
+                  
+                </div>
+              </a>
+            
+              <a href="/services/branding/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Servizi per le Aziende</div>
+                  
+                </div>
+              </a>
+            
+          </div>
+
+        </li>
+      
     
-    <li class="">
-      <a href="/about/">Chi Siamo</a>
-    </li>
+      
+
+        
+        
+
+        <li class="menu-item-dropdown menu-item-Esami ">
+          <a href="/projects/">Esami <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/projects/chimica-clinica/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Chimica Clinica</div>
+                  
+                </div>
+              </a>
+            
+              <a href="/projects/microbiologia/" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Microbiologia</div>
+                  
+                </div>
+              </a>
+            
+          </div>
+
+        </li>
+      
     
-    <li class="">
-      <a href="/contact/">Contatti</a>
-    </li>
+      
+        
+        <li class=" ">
+          <a href="/blog/" >Blog</a>
+        </li>
+      
+    
+      
+        
+        <li class=" ">
+          <a href="/about/" >Chi siamo</a>
+        </li>
+      
     
   </ul>
 </div>
 
-  <div id="wrapper" class="wrapper">
-    <div class='header'>
-  <div class="container">
-    <div class="logo">
-      <a href="/"><img width="120px" height="130px" alt="Kobiol S.r.l." src="/images/logo/logo.jpg" /></a>
-    </div>
-    <div class="logo-mobile">
-      <a href="/"><img width="32px" height="32px" alt="Kobiol S.r.l." src="/images/logo/logo.jpg" /></a>
-    </div>
-    <div id="main-menu" class="main-menu">
+    
+    <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+<div id="wrapper" class="wrapper">     
   
-  <ul>
-    
-    <li class="active">
-      <a href="/services/">Servizi</a>
-    </li>
-    
-    <li class="">
-      <a href="/team/">Team</a>
-    </li>
-    
-    <li class="">
-      <a href="/about/">Chi Siamo</a>
-    </li>
-    
-    <li class="">
-      <a href="/contact/">Contatti</a>
-    </li>
-    
-  </ul>
-</div>
+  
 
-    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Mobile Menu">
-  <span class="hamburger-box">
-    <span class="hamburger-inner"></span>
-  </span>
-</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="hero 
+  
+  
+ 
+  hero-gradient
+" style="
+  
+ 
+  height: 500px;
+">
+  <div class="hero-background-image" style="
+  background-image: url('https://kobiolab.github.io//assets/images/gen/home/home-8-large.webp');
+  mix-blend-mode: overlay;
+"></div>
+  
+  <div class="container ">
+    <div class="row align-items-center">
+      <div class="col-12 col-lg-8">
+        <div class="hero-text" style="color: #FFFFFF;">
+          <h1>Services</h1>
+          <p>We offer a complete range of digital services.</p>
+          
+        </div>
+      </div>
+      
+    </div>
   </div>
 </div>
 
-    <div class="intro">
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section">
   <div class="container">
-    <div class="row justify-content-start">
-      <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
-        <h1 id="i-nostri-servizi">I nostri servizi</h1>
+    <div class="row">
 
-<p>Il Laboratorio offre servizi per privati ed aziende. Cerca il servizio di cui hai bisogno e contattaci per eventuali informazioni.</p>
+      
 
+
+
+
+
+      
+      
+
+        
+        
+        
+        <div class="col-12 col-md-4 col-lg-4 mt-0  mb-3 mb-md-6">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="card card-service card-services card-has-thumbnail card-has-icon">
+
+  
+    <div class="card-thumbnail ">
+      
+      <a href="/services/analisi-lab/">
+        <img alt="Analisi di Laboratorio" width="640" height="360" src="/assets/images/gen/services/service-1-thumbnail.webp"/>
+      </a>
+    
+    </div>
+  
+
+
+  <div class="card-content">
+
+    
+      <div class="card-icon">
+        <img alt="Analisi di Laboratorio" width="50" height="50" src=" /assets/images/icons/icons8-laboratory-100.png "/>
       </div>
+    
+
+    
+
+    <div class="card-title">
       
-      <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-        <img alt=Services class="intro-image intro-image-hide-mobile" src="/images/illustrations/services.jpg" />
-        <a href="https://www.freepik.com/free-vector/employee-engagement-concept-illustration_40467239.htm#page=7&query=services&position=11&from_view=search&track=robertav1_2_sidr">Image by storyset</a> on Freepik      </div>
+        <h3><a href="/services/analisi-lab/">Analisi di Laboratorio</a></h3>
       
+    </div>
+
+    
+
+    
+      <div class="card-description">
+        <p>Esami di chimica clinica e microbiologia.</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+        </div>
+      
+
+        
+        
+        
+        <div class="col-12 col-md-4 col-lg-4  mb-0 mb-3 mb-md-6">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="card card-service card-services card-has-thumbnail card-has-icon">
+
+  
+    <div class="card-thumbnail ">
+      
+      <a href="/services/branding/">
+        <img alt="Servizi per le Aziende" width="640" height="360" src="/assets/images/gen/services/service-3-thumbnail.webp"/>
+      </a>
+    
+    </div>
+  
+
+
+  <div class="card-content">
+
+    
+      <div class="card-icon">
+        <img alt="Servizi per le Aziende" width="50" height="50" src=" /assets/images/icons/icons8-company-100.png "/>
+      </div>
+    
+
+    
+
+    <div class="card-title">
+      
+        <h3><a href="/services/branding/">Servizi per le Aziende</a></h3>
+      
+    </div>
+
+    
+
+    
+      <div class="card-description">
+        <p>The expression of a brand including its name, trademark, and visual appearance.</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+        </div>
+      
+
+      
+
+
+
+
+
+
     </div>
   </div>
 </div>
 
-<div class="container pt-6 pb-6">
-  <div class="row">
-    
-    
-    <div class="col-12 col-md-6 mb-3">
-      <div class="service service-summary">
-        <div class="service-content">
-          <h2 class="service-title">
-            <a href="/services/analisibiologiche/">Analisi Mediche e Biologiche</a>
-          </h2>
-          <p>Il laboratoratorio analisi esegue privatamente e in convenzione con il Sistema Sanitario Nazional...</p>
-        </div>
+
+
+  <div class="section section-base-bg-2 strip-border-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          
+
+
+
+
+
+
+
+
+<div class="info">
+  <div class="row ">
+    <div class="col-12 col-md-6  order-1">
+      <div class="info-content">
+        
+          <h2>Ready to get started?</h2>
+        
+        
+          <p class="mt-1 ">Contact us today for a free quote!</p>
+        
+        
+        
+          <div class="info-buttons mt-2">
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+<a href="/contact"  class="
+  mr-1 button
+  button-primary
+  
+  
+  
+  
+  
+  
+">
+  Get A Quote
+</a>
+
+            
+          </div>
+        
       </div>
     </div>
-    
-    <div class="col-12 col-md-6 mb-3">
-      <div class="service service-summary">
-        <div class="service-content">
-          <h2 class="service-title">
-            <a href="/services/Checkup%20Salute/">Check-Up Salute</a>
-          </h2>
-          <p>Financial accounting (or financial accountancy) is the field of accounting concerned with the sum...</p>
-        </div>
-      </div>
+
+    <div class="col-12 col-md-6 order-2 mt-3 mt-md-0">
+      
     </div>
-    
-    <div class="col-12 col-md-6 mb-3">
-      <div class="service service-summary">
-        <div class="service-content">
-          <h2 class="service-title">
-            <a href="/services/serviziextra/">Servizi Extra</a>
-          </h2>
-          <p>Financial accounting (or financial accountancy) is the field of accounting concerned with the sum...</p>
-        </div>
-      </div>
-    </div>
-    
+
   </div>
 </div>
 
+        </div>
+      </div>
+    </div>
   </div>
+
+
+
+ 
+</div>
+
+
   <div class="footer">
   <div class="container">
     <div class="row">
-      <div class="col-12">
-        <div class="footer-inner">
-          <h2 class="footer-title">Kobiol S.r.l.</h2>
-          <ul>
+
+        <div class="col-12 col-md-4">
+          <div class="footer-info">
             
+              <h2>Kobiol S.r.l.</h2>
             
-            <li class="">
-              <a href="/">Home</a>
-            </li>
+
             
-            <li class="">
-              <a href="/contact/">Contatti</a>
-            </li>
+              <p>Laboratorio Analisi Mediche e Biologiche</p>
             
-          </ul>
+          </div>
+
+          
+            
+
+<div class="social" id="social">
+  
+  <a href="https://www.zerostatic.io" target="blank" title="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+  
+  <a href="https://www.zerostatic.io" target="blank" title="Github">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="https://www.zerostatic.io" target="blank" title="Discord">
+    <i class="fab fa-discord"></i>
+  </a>
+  
+  <a href="https://www.zerostatic.io" target="blank" title="Tiktok">
+    <i class="fab fa-tiktok"></i>
+  </a>
+  
+  <a href="https://www.zerostatic.io" target="blank" title="Facebook">
+    <i class="fab fa-facebook-square"></i>
+  </a>
+  
+  <a href="https://www.zerostatic.io" target="blank" title="Instagram">
+    <i class="fab fa-instagram-square"></i>
+  </a>
+  
+  <a href="https://www.zerostatic.io" target="blank" title="Linkedin">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  
+</div>
+
+
+          
+          
         </div>
+
+        <div class="col-12 col-md-8 mt-gutter mt-md-0">
+          <div class="row justify-content-end">
+
+            
+              <div class="col-12 col-md-3 mt-gutter mt-md-0">
+                <div class="footer-menu">
+                  
+                    <h3>Product</h3>
+                  
+                  
+<div class="menu-footer">
+  <ul>
+    
+      <li class="">
+        <a href="/">Home</a>
+      </li>
+    
+      <li class="active">
+        <a href="/services/">Services</a>
+      </li>
+    
+      <li class="">
+        <a href="/projects/">Projects</a>
+      </li>
+    
+      <li class="">
+        <a href="/team/">Team</a>
+      </li>
+    
+  </ul>
+</div>
+
+                </div>
+              </div>
+            
+
+            
+              <div class="col-12 col-md-3 mt-gutter mt-md-0">
+                <div class="footer-menu">
+                
+                  <h3>Company</h3>
+                
+                
+<div class="menu-footer">
+  <ul>
+    
+      <li class="">
+        <a href="/blog/">Blog</a>
+      </li>
+    
+      <li class="">
+        <a href="/about/">About</a>
+      </li>
+    
+      <li class="">
+        <a href="/contact/">Contact</a>
+      </li>
+    
+  </ul>
+</div>
+
+                </div>
+              </div>
+            
+
+            
+              <div class="col-12 col-md-3 mt-gutter mt-md-0">
+                <div class="footer-menu">
+                
+                  <h3>Other</h3>
+                
+                
+<div class="menu-footer">
+  <ul>
+    
+      <li class="">
+        <a href="/privacy-policy/">Privacy Policy</a>
+      </li>
+    
+      <li class="">
+        <a href="/terms-and-conditions/">Terms and Conditions</a>
+      </li>
+    
+  </ul>
+</div>
+
+                </div>
+              </div>
+            
+        
+          </div>
+        </div>
+      
+    </div>
+    
+    <div class="row justify-content-end mt-2">
+      <div class="col-12 col-md-4">
+        <h3>Contact Us</h3>
+        
+
+<div class="contact">
+  
+    <div class="contact-email">
+      <strong>Email:</strong>
+      <a href="mailto:laboratorio.kobiol@gmail.com">laboratorio.kobiol@gmail.com</a>
+    </div>
+  
+  
+    <div class="contact-phone">
+      <strong>Phone:</strong>
+      050 56 44 75</div>
+  
+  
+  
+    <div class="contact-address">
+      <strong>Address:</strong>
+      Via Armando Diaz, 6, 56123 Pisa PI <a href="https://maps.app.goo.gl/2AQ5YPt3PiJazx7y7" target="_blank" rel="noreferrer">(View Map)</a> 
+    </div>
+  
+</div>
       </div>
+    </div>
+    
+
+  </div>
+</div>
+
+
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+       
+        
+          <div class="menu-bottom">
+  <ul>
+    
+      <li class="menu-item-Privacy Policy">
+        <a href="/privacy-policy/">Privacy Policy</a>
+      </li>
+    
+      <li class="menu-item-Terms and Conditions">
+        <a href="/terms-and-conditions/">Terms and Conditions</a>
+      </li>
+    
+  </ul>
+</div>
+        
+        
+        
+          <div class="copyright">© 2023 Zerostatic Themes</div>
+        
+        
+        
+          <a class="feed" href="https://kobiolab.github.io//feed.xml">
+            <i class="fas fa-feed"></i>
+          </a>
+        
+        
+      </div>
+      
+        <div class="col-auto">
+          <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z"></path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;" version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z"></path>
+      </g>
+      <g>
+        <path d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z"></path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+        </div>
+         
     </div>
   </div>
 </div>
 
-  <div class="sub-footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="sub-footer-inner">
-          
-            <div class="social">
-  
-    <a href="https://www.instagram.com/kobiolab/" target="blank"><img src="/images/social/instagram.svg" title="Instagram" alt="Instagram" /></a>
-  
-    <a href="https://www.linkedin.com/company/kobiol-s-r-l/" target="blank"><img src="/images/social/linkedin.svg" title="LinkedIn" alt="LinkedIn" /></a>
-  
-</div>
 
-          
-          
-          <div class="copyright">2023 KOBIOL S.r.l. Via Armando Diaz, 6 - 56123 Pisa (PI) P.IVA e C.F. 00225160506 | Tutti i diritti riservati - All Right Reserved</div>
-          
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-  <script type="text/javascript" src="/assets/js/scripts.js"></script>
-  
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+
+<script type="text/javascript" src="/assets/js/hamburger.js"></script>
+<script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+
+
+
+
 </body>
 </html>
