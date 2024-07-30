@@ -5,8 +5,8 @@
     <description></description>
     <link>https://kobiolab.github.io//</link>
     <atom:link href="https://kobiolab.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 19 Jul 2024 15:22:12 +0200</pubDate>
-    <lastBuildDate>Fri, 19 Jul 2024 15:22:12 +0200</lastBuildDate>
+    <pubDate>Tue, 30 Jul 2024 12:26:29 +0200</pubDate>
+    <lastBuildDate>Tue, 30 Jul 2024 12:26:29 +0200</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
     
       <item>
@@ -457,7 +457,9 @@
         <title>H2 Breath Test</title>
         <description>&lt;h2 id=&quot;h2-breath-test&quot;&gt;H2 Breath Test&lt;/h2&gt;
 
-&lt;p&gt;Il Breath test o “test del respiro” è un esame diagnostico non invasivo che si effettua soffiando su un tubicino per valutare alcune intolleranze alimentari, il tempo di transito intestinale ed una eventuale colonizzazione anomala del nostro intestino da parte di alcuni batteri.&lt;/p&gt;
+&lt;p&gt;Il breath test o “test del respiro” è un esame diagnostico non invasivo che si effettua soffiando su un tubicino per valutare alcune intolleranze alimentari, il tempo di transito intestinale e la sindrome da sovracrescita batterica nel tenue nota come SIBO.&lt;/p&gt;
+
+&lt;p&gt;Il principio sul quale si basa il breath test è che i gas prodotti dalla fermentazione di tutti i substrati analizzati, in particolare l’idrogeno, passano dall’intestino al circolo sanguigno raggiungendo i polmoni e possono quindi essere misurati nelle espirazioni del paziente. La quantità rilevata indica la presenza o meno di una condizione patologica.&lt;/p&gt;
 
 &lt;h3 id=&quot;h2-breath-test-test-funzionali---eseguiti-presso-kobiol-laboratorio-analisi-mediche-e-biologiche&quot;&gt;H2 Breath Test (Test Funzionali) - Eseguiti presso Kobiol Laboratorio Analisi Mediche e Biologiche&lt;/h3&gt;
 
@@ -466,7 +468,6 @@
     &lt;tr&gt;
       &lt;th&gt;Test&lt;/th&gt;
       &lt;th&gt;Durata&lt;/th&gt;
-      &lt;th&gt;Intervalli&lt;/th&gt;
       &lt;th&gt;Determinazione&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
@@ -474,145 +475,90 @@
     &lt;tr&gt;
       &lt;td&gt;H2 Breath Test al Fruttosio&lt;/td&gt;
       &lt;td&gt;4 ore&lt;/td&gt;
-      &lt;td&gt;30 min&lt;/td&gt;
-      &lt;td&gt;Intolleranza al fruttosio e ai FODMAPs&lt;/td&gt;
+      &lt;td&gt;Intolleranza al fruttosio e agli oligosaccaridi, disaccaridi, monosaccaridi fermentabili e polioli (FODMAPs)&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;H2 Breath Test al Glucosio&lt;/td&gt;
       &lt;td&gt;2 ore&lt;/td&gt;
-      &lt;td&gt;15 min&lt;/td&gt;
       &lt;td&gt;Sovracrescita batterica nel tenue (SIBO)&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;H2 Breath Test all’Inulina&lt;/td&gt;
       &lt;td&gt;4 ore&lt;/td&gt;
-      &lt;td&gt;15 min&lt;/td&gt;
       &lt;td&gt;Intolleranza ai FODMAPs&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;H2 Breath Test al Lattosio&lt;/td&gt;
       &lt;td&gt;4 ore&lt;/td&gt;
-      &lt;td&gt;30 min&lt;/td&gt;
-      &lt;td&gt;Intolleranza al fruttosio e ai FODMAPs&lt;/td&gt;
+      &lt;td&gt;Intolleranza al lattosio e ai FODMAPs&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;H2 Breath Test al Lattulosio&lt;/td&gt;
       &lt;td&gt;4 ore&lt;/td&gt;
-      &lt;td&gt;15 min&lt;/td&gt;
       &lt;td&gt;Transito oro-cecale (OCTT) - Sovracrescita batterica nel tenue (SIBO)&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;H2 Breath Test al Sorbitolo&lt;/td&gt;
       &lt;td&gt;4 ore&lt;/td&gt;
-      &lt;td&gt;30 min&lt;/td&gt;
-      &lt;td&gt;Malassorbimento - Intolleranza ai FODMAPs&lt;/td&gt;
+      &lt;td&gt;Malassorbimento - Intolleranza ai FODMAPs - Celiachia&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h3 id=&quot;principio-del-breath-test&quot;&gt;Principio del Breath Test&lt;/h3&gt;
-
-&lt;p&gt;Il principio sul quale si basa il Breath Test è che, passando dal circolo sanguigno, i gas prodotti dalla fermentazione anomala di tutti i substrati analizzati, in particolare l’idrogeno, raggiungono i polmoni e possono quindi essere misurati. La quantità rilevata indica la presenza o meno di una condizione patologica.&lt;/p&gt;
-
-&lt;h3 id=&quot;dettagli-sui-test-specifici&quot;&gt;Dettagli sui Test Specifici&lt;/h3&gt;
-
-&lt;h3 id=&quot;h2-breath-test-al-fruttosio&quot;&gt;H2 Breath Test al Fruttosio&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Determinazione&lt;/strong&gt;: Intolleranza al fruttosio e ai FODMAPs&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Durata&lt;/strong&gt;: 4 ore&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Misurazioni&lt;/strong&gt;: Ogni 30 min&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Substrato&lt;/strong&gt;: 25 gr fruttosio sciolto in 250 ml di acqua&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Indicazioni&lt;/strong&gt;: Valuta la capacità del sistema digerente di assorbire il fruttosio. Un incremento di 20 ppm o più nella concentrazione di idrogeno espirato indica malassorbimento del fruttosio e dei FODMAPs.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;h2-breath-test-al-glucosio&quot;&gt;H2 Breath Test al Glucosio&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Determinazione&lt;/strong&gt;: Sovracrescita batterica nel tenue (SIBO)&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Durata&lt;/strong&gt;: 2 ore&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Misurazioni&lt;/strong&gt;: Ogni 15 min&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Substrato&lt;/strong&gt;: 50 gr di glucosio sciolto in 200 ml di acqua&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Indicazioni&lt;/strong&gt;: Valuta la sovracrescita batterica nel tenue. Un aumento dell’escrezione di H2 può indicare malassorbimento. Non eseguibile in caso di diabete.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;h2-breath-test-allinulina&quot;&gt;H2 Breath Test all’Inulina&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Determinazione&lt;/strong&gt;: Intolleranza ai FODMAPs&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Durata&lt;/strong&gt;: 4 ore&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Misurazioni&lt;/strong&gt;: Ogni 15 min&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Substrato&lt;/strong&gt;: 10 gr inulina sciolto in 200 ml di acqua&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Indicazioni&lt;/strong&gt;: Valuta l’assorbimento dell’inulina e la fermentazione batterica. Un incremento di 10 ppm o più nella concentrazione di idrogeno espirato indica malassorbimento dei FODMAPs.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;h2-breath-test-al-lattosio&quot;&gt;H2 Breath Test al Lattosio&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Determinazione&lt;/strong&gt;: Intolleranza al lattosio e ai FODMAPs&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Durata&lt;/strong&gt;: 4 ore&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Misurazioni&lt;/strong&gt;: Ogni 30 min&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Substrato&lt;/strong&gt;: 25 gr (adulto) e 125 gr (bambino) di lattosio sciolto in 200 ml di acqua&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Indicazioni&lt;/strong&gt;: Valuta la capacità di digerire il lattosio. Un incremento di 20 ppm o più nella concentrazione di idrogeno espirato indica malassorbimento del lattosio. Il paziente non deve aver interrotto l’assunzione di latticini.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;h2-breath-test-al-lattulosio&quot;&gt;H2 Breath Test al Lattulosio&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Determinazione&lt;/strong&gt;: Transito oro-cecale (OCTT) e Sovracrescita batterica nel tenue (SIBO)&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Durata&lt;/strong&gt;: 4 ore&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Misurazioni&lt;/strong&gt;: Ogni 15 min&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Substrato&lt;/strong&gt;: 10 gr di lattulosio sciolto in 200 ml di acqua&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Indicazioni&lt;/strong&gt;: Valuta il transito intestinale e la sovracrescita batterica nel tenue. Un incremento di 20 ppm o più nella concentrazione di idrogeno espirato indica malassorbimento del lattulosio.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;h2-breath-test-al-sorbitolo&quot;&gt;H2 Breath Test al Sorbitolo&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Determinazione&lt;/strong&gt;: Intolleranza al sorbitolo e FODMAP&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Durata&lt;/strong&gt;: 4 ore&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Misurazioni&lt;/strong&gt;: Ogni 30 min&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Substrato&lt;/strong&gt;: 10 gr sorbitolo sciolto in 200 ml di acqua&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Indicazioni&lt;/strong&gt;: Utile per la diagnosi di celiachia e altre sindromi da malassorbimento. Un incremento di 20 ppm o più nella concentrazione di idrogeno espirato indica malassorbimento del sorbitolo.&lt;/li&gt;
-&lt;/ul&gt;
-
 &lt;h3 id=&quot;preparazione-necessaria&quot;&gt;Preparazione Necessaria&lt;/h3&gt;
+
+&lt;p&gt;Per eseguire tutti i breath test occorre una preparazione:&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th&gt;Fase&lt;/th&gt;
-      &lt;th&gt;Indicazioni&lt;/th&gt;
+      &lt;th&gt;Periodo&lt;/th&gt;
+      &lt;th&gt;Istruzioni&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;Nei 7 giorni precedenti&lt;/td&gt;
-      &lt;td&gt;Sospendere antibiotici, fermenti lattici, procinetici, lassativi anche meccanici (es. microclismi).&lt;/td&gt;
+      &lt;td&gt;Nei 7 giorni precedenti l’esame&lt;/td&gt;
+      &lt;td&gt;Sospendere l’uso di antibiotici, fermenti lattici, procinetici e lassativi anche meccanici (es. microclismi).&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Il giorno precedente&lt;/td&gt;
-      &lt;td&gt;Evitare carboidrati complessi (frutta, verdura, pane, pasta, legumi), alcolici, caramelle, gomme da masticare.&lt;/td&gt;
+      &lt;td&gt;Il giorno precedente l’esame&lt;/td&gt;
+      &lt;td&gt;Evitare di assumere carboidrati complessi (frutta, verdura, pane, pasta, legumi), alcolici, caramelle e gomme da masticare.&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Dieta per pranzo e cena&lt;/td&gt;
-      &lt;td&gt;Riso bollito, olio extravergine di oliva, carne bianca o pesce bollito o ai ferri, acqua non gassata.&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Dieta per colazione: tè senza zucchero e fette biscottate.&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Il giorno stesso&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Dieta per pranzo e cena: riso bollito, olio extravergine di oliva, carne bianca o pesce bollito o ai ferri, acqua non gassata.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Il giorno stesso dell’esame&lt;/td&gt;
       &lt;td&gt;Digiuno da almeno 8 ore, non bere (massimo ½ bicchiere di acqua), non fumare, non fare sforzi fisici, non lavarsi i denti con il dentifricio.&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Immediatamente prima&lt;/td&gt;
+      &lt;td&gt;Immediatamente prima dell’esame&lt;/td&gt;
       &lt;td&gt;Lavaggio orale con un colluttorio a base di Clorexidina.&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;Durante l’esame&lt;/td&gt;
-      &lt;td&gt;Non dormire, non bere né mangiare, non fumare, esporre qualsiasi sintomo insorto durante il test.&lt;/td&gt;
+      &lt;td&gt;Non dormire, non bere né mangiare, non fumare, ed è necessario esporre al personale medico qualsiasi sintomo insorto durante il test.&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
+&lt;h3 id=&quot;note&quot;&gt;Note&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Per eseguire il test occorre che la prima misurazione sia &amp;lt; 10 ppm. Se superiore, il test deve essere rimandato dopo che il paziente ha eseguito un’altra preparazione.&lt;/li&gt;
+  &lt;li&gt;Il breath test al glucosio non può essere eseguito da pazienti diabetici.
+                                             |&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h3 id=&quot;bibliografia&quot;&gt;Bibliografia&lt;/h3&gt;
 
 &lt;p&gt;Braden B. et al. Methods and functions: Breath tests. Best Practice &amp;amp; Research Clinical Gastroenterology 23 (2009).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Per eseguire il test occorre che la prima misurazione sia &amp;lt; 10 ppm. Se superiore, il test deve essere rimandato dopo che il paziente ha eseguito un’altra preparazione.&lt;/p&gt;
-
 </description>
         <pubDate>Wed, 19 Jun 2024 00:00:00 +0200</pubDate>
         <link>https://kobiolab.github.io//blog/2024-06-19-lattosio/</link>
