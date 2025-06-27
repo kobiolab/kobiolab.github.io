@@ -13715,37 +13715,43 @@ html[data-bs-theme=dark] .highlight .gi {
 
 .section {
   background-repeat: no-repeat;
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
+  padding-top: calc(var(--section-padding) / 2);
+  padding-bottom: calc(var(--section-padding) / 2);
 }
 @media (min-width: 768px) {
   .section {
-    padding-top: var(--section-padding);
-    padding-bottom: var(--section-padding);
+    padding-top: calc(var(--section-padding) / 2);
+    padding-bottom: calc(var(--section-padding) / 2);
   }
 }
 @media (min-width: 992px) {
   .section {
-    padding-top: var(--section-padding);
-    padding-bottom: var(--section-padding);
+    padding-top: calc(var(--section-padding) / 2);
+    padding-bottom: calc(var(--section-padding) / 2);
   }
 }
 .section .section-heading {
   text-align: center;
-  margin-bottom: var(--section-padding);
+  margin-bottom: calc(var(--section-padding) / 2);
 }
 .section .section-footer {
-  margin-top: var(--section-padding);
+  margin-top: calc(var(--section-padding) / 2);
   text-align: center;
 }
 .section.section-base-bg {
   background-color: var(--color-base-bg);
+  padding-top: calc(var(--section-padding) / 2);
+  padding-bottom: calc(var(--section-padding) / 2);
 }
 .section.section-base-bg-2 {
   background-color: var(--color-base-bg-2);
+  padding-top: calc(var(--section-padding) / 2);
+  padding-bottom: calc(var(--section-padding) / 2);
 }
 .section.section-base-bg-3 {
   background-color: var(--color-base-bg-3);
+  padding-top: calc(var(--section-padding) / 2);
+  padding-bottom: calc(var(--section-padding) / 2);
 }
 
 .header {
@@ -13832,8 +13838,8 @@ html[data-bs-theme=dark] .highlight .gi {
 }
 
 .footer {
-  padding-top: calc(var(--section-padding) * 2);
-  padding-bottom: calc(var(--section-padding) * 2);
+  padding-top: calc(var(--section-padding) / 4);
+  padding-bottom: calc(var(--section-padding) / 4);
   background-color: var(--color-base-bg);
   color: var(--color-base-text);
   font-size: 15px;
@@ -13873,7 +13879,7 @@ html[data-bs-theme=dark] .highlight .gi {
   font-weight: 700;
 }
 .footer .footer-menu {
-  margin-bottom: 10px;
+  margin-bottom: 4px;
 }
 .footer .footer-info h2, .footer .footer-info .h2,
 .footer .footer-info h3,
@@ -13884,11 +13890,11 @@ html[data-bs-theme=dark] .highlight .gi {
   color: inherit;
 }
 .footer .footer-info p {
-  font-size: 16px;
+  font-size: 20px;
   color: inherit;
 }
 .footer .footer-info + .social {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .footer .contact > div {
   padding: 4px 0 4px 0;
@@ -13907,8 +13913,8 @@ html[data-bs-theme=dark] .highlight .gi {
 .bottom {
   background-color: var(--color-base-bg-2);
   color: var(--color-base-text);
-  padding-top: calc(var(--section-padding) * 0.5);
-  padding-bottom: calc(var(--section-padding) * 0.5);
+  padding-top: calc(var(--section-padding) / 4);
+  padding-bottom: calc(var(--section-padding) / 4);
   font-size: 13px;
 }
 .bottom a.feed {
