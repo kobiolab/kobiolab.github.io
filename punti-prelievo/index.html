@@ -5,16 +5,16 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
 
-    <title>Diagnosi Prenatale - Kobiol</title>
+    <title>Punti Prelievo - Kobiol</title>
 
 
 
 
     <meta property="og:type" content="website"/>
-<meta property="og:url" content="https://kobiolab.github.io//category/diagnosi-prenatale/"/>
+<meta property="og:url" content="https://kobiolab.github.io//punti-prelievo/"/>
 
 
-  <meta property="og:title" content="Diagnosi Prenatale"/>
+  <meta property="og:title" content="Punti Prelievo"/>
 
 
 
@@ -49,7 +49,7 @@
     <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="1113d4f4-b422-4a0e-b656-7a5ed6683268";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
     </script>
   </head>
-<body class="page page-category has-fixed-header">
+<body class="page  has-fixed-header">
 
 
 <div class="menu-main-mobile nested" id="menu-main-mobile">
@@ -115,7 +115,7 @@
         
           
             
-            <li class="">
+            <li class="active">
               <a href="/punti-prelievo/">Punti Prelievo</a>
             </li>
           
@@ -322,7 +322,7 @@
     
       
         
-        <li class=" ">
+        <li class="active ">
           <a href="/punti-prelievo/" >Punti Prelievo</a>
         </li>
       
@@ -370,122 +370,282 @@
 </div>
 
 <div id="wrapper" class="wrapper">     
-  <div class="section">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12">
-        
+  <!-- Leaflet & MarkerCluster CSS (CDN) -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
 
+<style>
+  :root { --pp-header-offset: 0px; }
 
+  /* Usa PADDING TOP per spingere tutto sotto la navbar: il padding non collassa */
+  .pp-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: calc(var(--pp-header-offset) + 1rem) 1rem 1rem 1rem;
+  }
 
+  /* Il titolo non deve mai restare sotto l’header */
+  h1.page-title {
+    margin: 0;
+    padding: 0.25rem 0 0 0;
+    scroll-margin-top: calc(var(--pp-header-offset) + 0.5rem);
+  }
 
+  .pp-grid { display: grid; grid-template-columns: 1fr 420px; gap: 1rem; align-items: start; }
+  .pp-controls { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; margin-bottom: .75rem; }
+  .pp-controls .wide { grid-column: 1 / -1; }
+  .pp-toolbar { display: flex; gap: .5rem; align-items: center; }
+  #map { height: 540px; width: 100%; border-radius: .75rem; }
+  .pp-results { height: 540px; overflow: auto; border: 1px solid #eee; border-radius: .75rem; padding: .5rem; background: #fff; }
+  .pp-card { border-bottom: 1px solid #f2f2f2; padding: .6rem .4rem; cursor: pointer; }
+  .pp-card:last-child { border-bottom: none; }
+  .pp-card h3 { margin: 0 0 .25rem 0; font-size: 1rem; }
+  .pp-meta { font-size: .9rem; color: #444; }
+  .pp-badges { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .35rem; }
+  .pp-badge { font-size: .75rem; background: #f3f4f6; padding: .12rem .45rem; border-radius: .5rem; }
+  .pp-legend { font-size: .875rem; color: #666; margin-left: auto; }
+  .pp-empty { padding: 1rem; color: #666; }
+  .pp-status { padding: .5rem .75rem; border-radius: .5rem; font-size: .9rem; margin: .5rem 0; }
+  .pp-status.ok { background: #ecfdf5; border: 1px solid #10b98133; }
+  .pp-status.warn { background: #fff7ed; border: 1px solid #f59e0b33; }
+  .pp-status.err { background: #fef2f2; border: 1px solid #ef444433; }
+  button#pp-near-me { padding: .45rem .7rem; border: 1px solid #e5e7eb; background: #fff; border-radius: .5rem; }
 
+  /* La navbar deve restare sopra i layer Leaflet */
+  .leaflet-container, .leaflet-top, .leaflet-bottom { z-index: 1 !important; }
 
+  @media (max-width: 980px) {
+    .pp-grid { grid-template-columns: 1fr; }
+    #map, .pp-results { height: 420px; }
+  }
+</style>
 
-<div class="title">
-  <div class="col-12 ">
-  <div class="row align-items-center">
+<div class="pp-container">
+  <h1 class="page-title">Punti Prelievo</h1>
 
-    <div class="col-12 col-md-10">
+  <!-- Dati embedded da _data/. -->
+  <script id="pp-data" type="application/json">
+    [{"id":"pp-arena-metato","name":"Punto Prelievi Arena Metato","address":"Edificio Pubblica Assistenza S.R. Pisa - Arena Metato, Via Filippo Turati 23/B, 56017 Arena Metato, San Giuliano Terme (PI)","city":"San Giuliano Terme","hours":"Giovedì 8:00 - 9:30","phone":"050 811188","lat":43.7567,"lon":10.3605,"services":[]},{"id":"pp-migliarino","name":"Punto Prelievi Migliarino","address":"Edificio Pubblica Assistenza S.R. Pisa - Migliarino, Via Renato Fucini 61, 56019 Migliarino (PI)","city":"Migliarino Pisano","hours":"Mercoledì 8:00 - 9:30","phone":"050 804053","lat":43.7692,"lon":10.3431,"services":[]},{"id":"pp-livorno-svs","name":"Punto Prelievi SVS Polo Salute Livorno","address":"Edificio SVS Polo Salute - Livorno, Via San Giovanni 30, 57123 Livorno (LI)","city":"Livorno","hours":null,"phone":"0586 896040","lat":43.55177,"lon":10.30559,"services":[]}]
+  </script>
 
-      
+  <div id="pp-status" class="pp-status warn" role="status" aria-live="polite">Inizializzo…</div>
 
-      
-      <div class="title-badge">
-        <span>category</span>
-      </div>
-      
+  <div class="pp-controls" role="search">
+    <input id="pp-search" class="wide" type="search" placeholder="Cerca per nome, indirizzo, città o servizio…" aria-label="Cerca punti prelievo" />
 
-      
-      <div class="title-heading">
-        <h1>Diagnosi Prenatale</h1>
-      </div>
-      
+    <select id="pp-city" aria-label="Filtra per città">
+      <option value="">Tutte le città</option>
+    </select>
 
-      
+    <select id="pp-service" aria-label="Filtra per servizio">
+      <option value="">Tutti i servizi</option>
+    </select>
 
-      
-
+    <div class="pp-toolbar wide">
+      <button id="pp-near-me" type="button" title="Centra la mappa vicino a me">🔎 Vicino a me</button>
+      <span class="pp-legend" id="pp-count">0 risultati</span>
     </div>
-
-    
   </div>
+
+  <div class="pp-grid">
+    <div id="map" role="application" aria-label="Mappa dei punti prelievo"></div>
+    <div class="pp-results" id="pp-results" aria-live="polite"></div>
   </div>
 </div>
-      </div>
-    </div>
-  </div>
-</div>
 
+<!-- Leaflet & MarkerCluster JS (CDN) -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
-<div class="section strip-base">
-  <div class="container">
-    
-    
-      <div class="row">
-        <div class="col-12 col-md-8 mb-3 mb-lg-6">
-          
+<script>
+(function () {
+  const statusEl = document.getElementById('pp-status');
 
+  function setStatus(kind, text) {
+    statusEl.className = 'pp-status ' + kind;
+    statusEl.textContent = text;
+  }
 
+  function safeParsePoints(raw) {
+    const trimmed = (raw || '').trim();
+    if (!trimmed || trimmed === 'null' || trimmed === 'undefined') return [];
+    try {
+      return JSON.parse(trimmed);
+    } catch (e1) {
+      const fixed = trimmed.replace(/,(?=\s*[}\]])/g, '');
+      try {
+        return JSON.parse(fixed);
+      } catch (e2) {
+        console.error('JSON parse fallito:', e1, e2);
+        throw e2;
+      }
+    }
+  }
 
+  let ALL_POINTS = [];
+  try {
+    const raw = (document.getElementById('pp-data')?.textContent || '').trim() || '[]';
+    ALL_POINTS = safeParsePoints(raw);
+  } catch (e) {
+    setStatus('err', 'Errore: JSON non valido in _data. (Vedi console)');
+    return;
+  }
 
+  if (!Array.isArray(ALL_POINTS)) {
+    setStatus('err', 'Errore: il file in _data deve contenere un array JSON.');
+    return;
+  }
 
+  const valid = ALL_POINTS.filter(p => Number.isFinite(p?.lat) && Number.isFinite(p?.lon));
+  const dropped = ALL_POINTS.length - valid.length;
+  if (ALL_POINTS.length === 0) {
+    setStatus('warn', 'Nessun punto disponibile (array vuoto).');
+  } else if (dropped > 0) {
+    setStatus('warn', `Dati caricati: ${valid.length}/${ALL_POINTS.length} (alcuni record senza lat/lon ignorati)`);
+  } else {
+    setStatus('ok', `Dati caricati: ${valid.length} punto${valid.length !== 1 ? 'i' : ''}`);
+  }
 
+  const norm = (s) => (s || '').toString().toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '');
 
+  let map = L.map('map', { zoomControl: true }).setView([41.8719, 12.5674], 6);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+  let cluster = L.markerClusterGroup();
+  map.addLayer(cluster);
 
+  const markersIndex = new Map();
+  function pointToMarker(p) {
+    const m = L.marker([p.lat, p.lon]);
+    const services = (p.services || []).map(s => `<span class="pp-badge">${s}</span>`).join(' ');
+    m.bindPopup(`
+      <strong>${p.name || ''}</strong><br/>
+      ${(p.address || '')}${p.city ? ' — ' + p.city : ''}<br/>
+      ${p.hours ? '🕒 ' + p.hours + '<br/>' : ''}
+      ${p.phone ? '📞 ' + p.phone + '<br/>' : ''}
+      ${services}
+    `);
+    return m;
+  }
 
+  function populateFilters(points) {
+    const citySel = document.getElementById('pp-city');
+    const serviceSel = document.getElementById('pp-service');
 
+    const cities = Array.from(new Set(points.map(p => p.city).filter(Boolean))).sort();
+    const services = Array.from(new Set(points.flatMap(p => p.services || []))).sort();
 
+    for (const c of cities) { const o = document.createElement('option'); o.value = c; o.textContent = c; citySel.appendChild(o); }
+    for (const s of services) { const o = document.createElement('option'); o.value = s; o.textContent = s; serviceSel.appendChild(o); }
+  }
 
+  function renderList(points) {
+    const wrap = document.getElementById('pp-results');
+    const count = document.getElementById('pp-count');
+    wrap.innerHTML = '';
 
-<div class="card card-post card-row card-has-thumbnail ">
+    if (points.length === 0) {
+      wrap.innerHTML = '<div class="pp-empty">Nessun punto corrisponde ai filtri.</div>';
+    }
 
-  
-    <div class="card-thumbnail ">
-      
-      <a href="/blog/2024-06-19-prenatal-safe/">
-        <img alt="Diagnosi Prenatale Non Invasiva" width="640" height="360" src="/assets/images/gen/blog/prenatalsafe.png"/>
-      </a>
-    
-    </div>
-  
+    points.forEach(p => {
+      const el = document.createElement('div');
+      el.className = 'pp-card';
+      el.innerHTML = `
+        <h3>${p.name || ''}</h3>
+        <div class="pp-meta">${p.address || ''}${p.city ? ' — ' + p.city : ''}</div>
+        ${p.hours ? `<div class="pp-meta">🕒 ${p.hours}</div>` : ''}
+        ${p.phone ? `<div class="pp-meta">📞 ${p.phone}</div>` : ''}
+        <div class="pp-badges">${(p.services || []).map(s => `<span class='pp-badge'>${s}</span>`).join('')}</div>
+      `;
+      el.addEventListener('click', () => {
+        const mk = markersIndex.get(p.id);
+        if (mk) { map.setView(mk.getLatLng(), 16, { animate: true }); mk.openPopup(); }
+      });
+      wrap.appendChild(el);
+    });
 
-  <div class="card-content">
-    
-    <div class="card-meta">
+    count.textContent = `${points.length} risultato${points.length !== 1 ? 'i' : ''}`;
+  }
 
-      
-        <div class="card-date">19 June 2024</div>
-      
+  function applyFilters() {
+    const q = norm(document.getElementById('pp-search').value);
+    const city = document.getElementById('pp-city').value;
+    const service = document.getElementById('pp-service').value;
 
-    </div>  
-    
+    const filtered = valid.filter(p => {
+      const inCity = !city || p.city === city;
+      const hasService = !service || (p.services || []).includes(service);
+      const qtext = `${p.name} ${p.address || ''} ${p.city || ''} ${(p.services || []).join(' ')}`;
+      const matchQ = !q || norm(qtext).includes(q);
+      return inCity && hasService && matchQ;
+    });
 
-    <div class="card-title">
-      
-        <h3><a href="/blog/2024-06-19-prenatal-safe/">Diagnosi Prenatale Non Invasiva</a></h3>
-      
-    </div>
+    cluster.clearLayers();
+    markersIndex.clear();
+    filtered.forEach(p => { const mk = pointToMarker(p); markersIndex.set(p.id, mk); cluster.addLayer(mk); });
 
-    
+    if (filtered.length) {
+      const group = L.featureGroup(filtered.map(p => L.marker([p.lat, p.lon])));
+      map.fitBounds(group.getBounds().pad(0.2));
+    }
 
-    
-      <div class="card-description">
-        <p>Screening prenatali non invasivi basati su indagini strumentali ed esami di laboratorio.</p>
-      </div>
-    
+    renderList(filtered);
+  }
 
-    
+  function nearMe() {
+    if (!navigator.geolocation) return alert('Geolocalizzazione non supportata dal browser.');
+    navigator.geolocation.getCurrentPosition(pos => {
+      const { latitude, longitude } = pos.coords;
+      map.setView([latitude, longitude], 13);
+    }, () => alert('Impossibile ottenere la posizione.'));
+  }
 
-    
+  // Inizializzazione
+  valid.forEach(p => { const mk = pointToMarker(p); markersIndex.set(p.id, mk); cluster.addLayer(mk); });
+  if (valid.length) {
+    const group = L.featureGroup(valid.map(p => L.marker([p.lat, p.lon])));
+    map.fitBounds(group.getBounds().pad(0.2));
+  }
 
-  </div>
-</div>
-        </div>
-      </div>
-    
-  </div>
-</div>
+  populateFilters(valid);
+  renderList(valid);
+
+  document.getElementById('pp-search').addEventListener('input', applyFilters);
+  document.getElementById('pp-city').addEventListener('change', applyFilters);
+  document.getElementById('pp-service').addEventListener('change', applyFilters);
+  document.getElementById('pp-near-me').addEventListener('click', nearMe);
+
+  // ===== Offset dinamico per header fisso/sticky =====
+  function computeHeaderOffset() {
+    // Aggiungi qui altri selettori se la tua navbar ha un nome personalizzato
+    const headers = document.querySelectorAll('header, .site-header, .navbar, nav, #header, .header');
+    let off = 0;
+    headers.forEach(hdr => {
+      const cs = getComputedStyle(hdr);
+      if (cs.position === 'fixed' || cs.position === 'sticky') {
+        const h = Math.ceil(hdr.getBoundingClientRect().height);
+        off = Math.max(off, h);
+        if (!hdr.style.zIndex) hdr.style.zIndex = '2000'; // garantisce header sopra la mappa
+      }
+    });
+    document.documentElement.style.setProperty('--pp-header-offset', off + 'px');
+  }
+
+  // Ricalcola su load/resize e se la navbar cambia altezza (es: classi sticky)
+  window.addEventListener('load', computeHeaderOffset);
+  window.addEventListener('resize', computeHeaderOffset);
+  document.fonts && document.fonts.addEventListener && document.fonts.addEventListener('loadingdone', computeHeaderOffset);
+  computeHeaderOffset();
+
+  // Osserva modifiche alla navbar (classi/inline style che cambiano l'altezza)
+  const hdr = document.querySelector('header, .site-header, .navbar, nav, #header, .header');
+  if (hdr && 'MutationObserver' in window) {
+    const mo = new MutationObserver(() => computeHeaderOffset());
+    mo.observe(hdr, { attributes: true, attributeFilter: ['class', 'style'] });
+  }
+})();
+</script>
 
 </div>
 
