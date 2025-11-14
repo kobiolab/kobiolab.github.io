@@ -78,7 +78,7 @@
                 <ul class="sub-menu">
                   
                     <li class="">
-                      <a href="/services/analisi-lab/">Analisi di Laboratorio</a>
+                      <a href="/services/analisi-lab/">Preparazione agli Esami</a>
                     </li>
                   
                     <li class="">
@@ -99,17 +99,9 @@
           
         
           
-            <li class="menu-item-esami">
-              <a href="/projects/">Esami</a>
-              <div class="dropdown">
-                <ul class="sub-menu">
-                  
-                    <li class="">
-                      <a href="/vademecum/">Vademecum Esami</a>
-                    </li>
-                  
-                </ul>
-              </div>
+            
+            <li class="">
+              <a href="/vademecum/">Esami</a>
             </li>
           
         
@@ -255,7 +247,7 @@
                 
 
                 <div class="dropdown-item-content">
-                  <div class="dropdown-item-name">Analisi di Laboratorio</div>
+                  <div class="dropdown-item-name">Preparazione agli Esami</div>
                   
                 </div>
               </a>
@@ -296,27 +288,9 @@
       
     
       
-
         
-        
-
-        <li class="menu-item-dropdown menu-item-Esami ">
-          <a href="/projects/">Esami <i class="fa-solid fa-chevron-down"></i></a>
-          
-          <div class="dropdown-menu">
-            
-              <a href="/vademecum/" class="dropdown-item ">
-                
-                
-
-                <div class="dropdown-item-content">
-                  <div class="dropdown-item-name">Vademecum Esami</div>
-                  
-                </div>
-              </a>
-            
-          </div>
-
+        <li class=" ">
+          <a href="/vademecum/" >Esami</a>
         </li>
       
     
@@ -378,42 +352,280 @@
 <style>
   :root { --pp-header-offset: 0px; }
 
-  /* Usa PADDING TOP per spingere tutto sotto la navbar: il padding non collassa */
   .pp-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: calc(var(--pp-header-offset) + 1rem) 1rem 1rem 1rem;
+    color: var(--color-base-text);
   }
 
-  /* Il titolo non deve mai restare sotto l’header */
   h1.page-title {
     margin: 0;
     padding: 0.25rem 0 0 0;
     scroll-margin-top: calc(var(--pp-header-offset) + 0.5rem);
+    color: var(--color-header-text, var(--color-base-text));
   }
 
-  .pp-grid { display: grid; grid-template-columns: 1fr 420px; gap: 1rem; align-items: start; }
-  .pp-controls { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; margin-bottom: .75rem; }
-  .pp-controls .wide { grid-column: 1 / -1; }
-  .pp-toolbar { display: flex; gap: .5rem; align-items: center; }
-  #map { height: 540px; width: 100%; border-radius: .75rem; }
-  .pp-results { height: 540px; overflow: auto; border: 1px solid #eee; border-radius: .75rem; padding: .5rem; background: #fff; }
-  .pp-card { border-bottom: 1px solid #f2f2f2; padding: .6rem .4rem; cursor: pointer; }
-  .pp-card:last-child { border-bottom: none; }
-  .pp-card h3 { margin: 0 0 .25rem 0; font-size: 1rem; }
-  .pp-meta { font-size: .9rem; color: #444; }
-  .pp-badges { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .35rem; }
-  .pp-badge { font-size: .75rem; background: #f3f4f6; padding: .12rem .45rem; border-radius: .5rem; }
-  .pp-legend { font-size: .875rem; color: #666; margin-left: auto; }
-  .pp-empty { padding: 1rem; color: #666; }
-  .pp-status { padding: .5rem .75rem; border-radius: .5rem; font-size: .9rem; margin: .5rem 0; }
-  .pp-status.ok { background: #ecfdf5; border: 1px solid #10b98133; }
-  .pp-status.warn { background: #fff7ed; border: 1px solid #f59e0b33; }
-  .pp-status.err { background: #fef2f2; border: 1px solid #ef444433; }
-  button#pp-near-me { padding: .45rem .7rem; border: 1px solid #e5e7eb; background: #fff; border-radius: .5rem; }
+  .pp-grid {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 1rem;
+    align-items: start;
+  }
 
-  /* La navbar deve restare sopra i layer Leaflet */
-  .leaflet-container, .leaflet-top, .leaflet-bottom { z-index: 1 !important; }
+  .pp-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+    margin-bottom: .75rem;
+  }
+
+  .pp-controls .wide {
+    grid-column: 1 / -1;
+  }
+
+  .pp-toolbar {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+  }
+
+  #map {
+    height: 540px;
+    width: 100%;
+    border-radius: .75rem;
+    border: 1px solid var(--color-base-bg-3);
+    background: var(--color-base-bg-2);
+  }
+
+  .pp-results {
+    height: 540px;
+    overflow: auto;
+    border-radius: .75rem;
+    padding: .5rem;
+    background: var(--color-base-bg);
+    border: 1px solid var(--color-base-bg-3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+
+  .pp-card {
+    border-bottom: 1px solid var(--color-base-bg-3);
+    padding: .6rem .4rem;
+    cursor: pointer;
+    transition: background-color .15s ease, transform .1s ease, box-shadow .15s ease;
+  }
+
+  .pp-card:last-child {
+    border-bottom: none;
+  }
+
+  .pp-card h3 {
+    margin: 0 0 .25rem 0;
+    font-size: 1rem;
+    color: var(--color-base-text);
+  }
+
+  .pp-meta {
+    font-size: .9rem;
+    color: var(--color-base-text-2);
+  }
+
+  .pp-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem;
+    margin-top: .35rem;
+  }
+
+  .pp-badge {
+    font-size: .75rem;
+    background: var(--color-base-bg-3);
+    color: var(--color-base-text);
+    padding: .12rem .45rem;
+    border-radius: .5rem;
+  }
+
+  .pp-card:hover {
+    background: var(--color-base-bg-2);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  }
+
+  .pp-legend {
+    font-size: .875rem;
+    color: var(--color-base-text-2);
+    margin-left: auto;
+  }
+
+  .pp-empty {
+    padding: 1rem;
+    color: var(--color-base-text-2);
+  }
+
+  .pp-status {
+    padding: .5rem .75rem;
+    border-radius: .5rem;
+    font-size: .9rem;
+    margin: .5rem 0;
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+  }
+
+  .pp-status.ok {
+    background: #ecfdf5;
+    border: 1px solid #10b98133;
+    color: #065f46;
+  }
+
+  .pp-status.warn {
+    background: #fff7ed;
+    border: 1px solid #f59e0b33;
+    color: #92400e;
+  }
+
+  .pp-status.err {
+    background: #fef2f2;
+    border: 1px solid #ef444433;
+    color: #b91c1c;
+  }
+
+  button#pp-near-me {
+    padding: .45rem .7rem;
+    border-radius: .5rem;
+    border: 1px solid var(--color-base-bg-3);
+    background: var(--color-base-bg);
+    color: var(--color-base-text);
+    font-size: .9rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: .25rem;
+    transition: background-color .15s ease, box-shadow .15s ease, transform .1s ease, border-color .15s ease;
+  }
+
+  button#pp-near-me:hover {
+    background: var(--color-base-bg-2);
+    border-color: var(--color-primary-bg);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  }
+
+  button#pp-near-me:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.4);
+  }
+
+  /* Input e select coerenti col tema */
+  #pp-search,
+  #pp-city,
+  #pp-service {
+    border-radius: .6rem;
+    border: 1px solid var(--color-base-bg-3);
+    background: var(--color-base-bg);
+    color: var(--color-base-text);
+    padding: .45rem .55rem;
+    font-size: .9rem;
+  }
+
+  #pp-search::placeholder {
+    color: var(--color-base-text-2);
+  }
+
+  #pp-search:focus,
+  #pp-city:focus,
+  #pp-service:focus {
+    outline: none;
+    border-color: var(--color-primary-bg);
+    box-shadow: 0 0 0 2px rgba(59,130,246,0.15);
+  }
+
+  /* Leaflet deve restare sotto l’header */
+  .leaflet-container,
+  .leaflet-top,
+  .leaflet-bottom {
+    z-index: 1 !important;
+  }
+
+  /* Dark mode specifica */
+  html[data-bs-theme='dark'] .pp-results {
+    background: var(--color-base-bg-2);
+    border-color: var(--color-base-bg-3);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.6);
+  }
+
+  html[data-bs-theme='dark'] .pp-card {
+    border-color: rgba(148,163,184,0.35);
+  }
+
+  html[data-bs-theme='dark'] .pp-card:hover {
+    background: rgba(148,163,184,0.12);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.8);
+  }
+
+  html[data-bs-theme='dark'] .pp-badge {
+    background: rgba(148,163,184,0.2);
+    color: var(--color-base-text);
+  }
+
+  html[data-bs-theme='dark'] .pp-status.ok {
+    background: rgba(16,185,129,0.16);
+    border-color: rgba(16,185,129,0.5);
+    color: #6ee7b7;
+  }
+
+  html[data-bs-theme='dark'] .pp-status.warn {
+    background: rgba(245,158,11,0.12);
+    border-color: rgba(245,158,11,0.6);
+    color: #fed7aa;
+  }
+
+  html[data-bs-theme='dark'] .pp-status.err {
+    background: rgba(239,68,68,0.16);
+    border-color: rgba(239,68,68,0.7);
+    color: #fecaca;
+  }
+
+  html[data-bs-theme='dark'] button#pp-near-me {
+    background: var(--color-base-bg-2);
+    border-color: var(--color-base-bg-3);
+    color: var(--color-base-text);
+  }
+
+  html[data-bs-theme='dark'] button#pp-near-me:hover {
+    background: var(--color-base-bg-3);
+    border-color: var(--color-primary-bg);
+  }
+
+  html[data-bs-theme='dark'] #pp-search,
+  html[data-bs-theme='dark'] #pp-city,
+  html[data-bs-theme='dark'] #pp-service {
+    background: var(--color-base-bg-2);
+    border-color: var(--color-base-bg-3);
+    color: var(--color-base-text);
+  }
+
+  html[data-bs-theme='dark'] #pp-search::placeholder {
+    color: var(--color-base-text-2);
+  }
+
+  html[data-bs-theme='dark'] #map {
+    background: #111827;
+    border-color: var(--color-base-bg-3);
+  }
+
+  /* Leaflet controlli e popup in dark */
+  html[data-bs-theme='dark'] .leaflet-control,
+  html[data-bs-theme='dark'] .leaflet-popup-content-wrapper,
+  html[data-bs-theme='dark'] .leaflet-popup-tip {
+    background: #1f2933;
+    color: #e5e7eb;
+    border-color: rgba(55,65,81,0.8);
+  }
+
+  html[data-bs-theme='dark'] .leaflet-popup-content-wrapper {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.85);
+  }
 
   @media (max-width: 980px) {
     .pp-grid { grid-template-columns: 1fr; }
@@ -421,12 +633,13 @@
   }
 </style>
 
+
 <div class="pp-container">
   <h1 class="page-title">Punti Prelievo</h1>
 
   <!-- Dati embedded da _data/. -->
   <script id="pp-data" type="application/json">
-    [{"id":"pp-arena-metato","name":"Punto Prelievi Arena Metato","address":"Edificio Pubblica Assistenza S.R. Pisa - Arena Metato, Via Filippo Turati 23/B, 56017 Arena Metato, San Giuliano Terme (PI)","city":"San Giuliano Terme","hours":"Giovedì 8:00 - 9:30","phone":"050 811188","lat":43.7567,"lon":10.3605,"services":[]},{"id":"pp-migliarino","name":"Punto Prelievi Migliarino","address":"Edificio Pubblica Assistenza S.R. Pisa - Migliarino, Via Renato Fucini 61, 56019 Migliarino (PI)","city":"Migliarino Pisano","hours":"Mercoledì 8:00 - 9:30","phone":"050 804053","lat":43.7692,"lon":10.3431,"services":[]},{"id":"pp-livorno-svs","name":"Punto Prelievi SVS Polo Salute Livorno","address":"Edificio SVS Polo Salute - Livorno, Via San Giovanni 30, 57123 Livorno (LI)","city":"Livorno","hours":null,"phone":"0586 896040","lat":43.55177,"lon":10.30559,"services":[]}]
+    [{"id":"pp-arena-metato","name":"Punto Prelievi Arena Metato","address":"Edificio Pubblica Assistenza S.R. Pisa - Arena Metato, Via Filippo Turati 23/B, 56017 Arena Metato, San Giuliano Terme (PI)","city":"San Giuliano Terme","hours":"Giovedì 8:00 - 9:30","phone":"050-811188","lat":43.7567,"lon":10.3605,"services":[]},{"id":"pp-migliarino","name":"Punto Prelievi Migliarino","address":"Edificio Pubblica Assistenza S.R. Pisa - Migliarino, Via Renato Fucini 61, 56019 Migliarino (PI)","city":"Migliarino Pisano","hours":"Mercoledì 8:00 - 9:30","phone":"050-804053","lat":43.7692,"lon":10.3431,"services":[]},{"id":"pp-livorno-svs","name":"Punto Prelievi SVS Polo Salute Livorno","address":"Edificio SVS Polo Salute - Livorno, Via San Giovanni 30, 57123 Livorno (LI)","city":"Livorno","hours":null,"phone":"0586-896040","lat":43.55177,"lon":10.30559,"services":[]}]
   </script>
 
   <div id="pp-status" class="pp-status warn" role="status" aria-live="polite">Inizializzo…</div>
@@ -504,7 +717,7 @@
   } else if (dropped > 0) {
     setStatus('warn', `Dati caricati: ${valid.length}/${ALL_POINTS.length} (alcuni record senza lat/lon ignorati)`);
   } else {
-    setStatus('ok', `Dati caricati: ${valid.length} punto${valid.length !== 1 ? 'i' : ''}`);
+    setStatus('ok', `Dati caricati: ${valid.length} punt${valid.length !== 1 ? 'i' : 'o'}`);
   }
 
   const norm = (s) => (s || '').toString().toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '');

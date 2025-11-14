@@ -78,7 +78,7 @@
                 <ul class="sub-menu">
                   
                     <li class="">
-                      <a href="/services/analisi-lab/">Analisi di Laboratorio</a>
+                      <a href="/services/analisi-lab/">Preparazione agli Esami</a>
                     </li>
                   
                     <li class="">
@@ -99,17 +99,9 @@
           
         
           
-            <li class="menu-item-esami">
-              <a href="/projects/">Esami</a>
-              <div class="dropdown">
-                <ul class="sub-menu">
-                  
-                    <li class=" active ">
-                      <a href="/vademecum/">Vademecum Esami</a>
-                    </li>
-                  
-                </ul>
-              </div>
+            
+            <li class="active">
+              <a href="/vademecum/">Esami</a>
             </li>
           
         
@@ -255,7 +247,7 @@
                 
 
                 <div class="dropdown-item-content">
-                  <div class="dropdown-item-name">Analisi di Laboratorio</div>
+                  <div class="dropdown-item-name">Preparazione agli Esami</div>
                   
                 </div>
               </a>
@@ -296,27 +288,9 @@
       
     
       
-
         
-        
-
-        <li class="menu-item-dropdown menu-item-Esami  active ">
-          <a href="/projects/">Esami <i class="fa-solid fa-chevron-down"></i></a>
-          
-          <div class="dropdown-menu">
-            
-              <a href="/vademecum/" class="dropdown-item  active ">
-                
-                
-
-                <div class="dropdown-item-content">
-                  <div class="dropdown-item-name">Vademecum Esami</div>
-                  
-                </div>
-              </a>
-            
-          </div>
-
+        <li class="active ">
+          <a href="/vademecum/" >Esami</a>
         </li>
       
     
@@ -387,27 +361,542 @@
     </div>
   </div>
 
-  <div class="legenda-box" aria-labelledby="legenda-title">
-    <h2 id="legenda-title">Legenda Campioni</h2>
-    <table class="legenda-table">
-      <thead>
-        <tr><th>Sigla</th><th>Significato</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>PL</td><td>Plasma</td></tr>
-        <tr><td>C.</td><td>Congelato</td></tr>
-        <tr><td>U</td><td>Urine</td></tr>
-        <tr><td>UIT</td><td>Urine inizio turno</td></tr>
-        <tr><td>UFT</td><td>Urine fine turno</td></tr>
-        <tr><td>S</td><td>Siero</td></tr>
-        <tr><td>PL EDTA</td><td>Plasma EDTA</td></tr>
-        <tr><td>PL LE</td><td>Plasma litio eparina</td></tr>
-        <tr><td>U C.</td><td>Urine congelate</td></tr>
-        <tr><td>U 24H A.</td><td>Urine 24 ore acidificate</td></tr>
-        <tr><td>U 24H</td><td>Urine 24 ore</td></tr>
-      </tbody>
-    </table>
+  <div class="legend-accordion">
+
+  <!-- CAMPIONI -->
+  <button class="legend-toggle" type="button" data-target="legend-campioni">
+    <span>Legenda Campioni</span>
+    <span class="legend-toggle-icon">+</span>
+  </button>
+
+  <div id="legend-campioni" class="legend-panel">
+    <div class="legenda-box" aria-labelledby="legenda-title">
+      <h2 id="legenda-title">
+        Legenda Campioni
+        
+        <span class="legend-count">(49 voci)</span>
+      </h2>
+
+      <input type="text" id="legendCampioniSearch" class="legend-search" placeholder="🔍 Cerca un campione per sigla o significato..." aria-label="Cerca nella legenda campioni" />
+
+      <table class="legenda-table" id="legendCampioniTable">
+        <thead>
+          <tr>
+            <th>Sigla</th>
+            <th>Significato</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          
+            <tr>
+              <td>B</td>
+              <td>Biopsia</td>
+            </tr>
+          
+            <tr>
+              <td>BAL</td>
+              <td>Broncolavaggio</td>
+            </tr>
+          
+            <tr>
+              <td>BAS</td>
+              <td>Broncoaspirato</td>
+            </tr>
+          
+            <tr>
+              <td>C.</td>
+              <td>Congelato</td>
+            </tr>
+          
+            <tr>
+              <td>CAP</td>
+              <td>Capelli</td>
+            </tr>
+          
+            <tr>
+              <td>E</td>
+              <td>Espettorato</td>
+            </tr>
+          
+            <tr>
+              <td>F</td>
+              <td>Feci</td>
+            </tr>
+          
+            <tr>
+              <td>L C.</td>
+              <td>Liquor congelato</td>
+            </tr>
+          
+            <tr>
+              <td>LA</td>
+              <td>Liquido amniotico</td>
+            </tr>
+          
+            <tr>
+              <td>LA C.</td>
+              <td>Liquido amniotico congelato</td>
+            </tr>
+          
+            <tr>
+              <td>LAS</td>
+              <td>Liquido ascitico</td>
+            </tr>
+          
+            <tr>
+              <td>LC</td>
+              <td>Liquidi cavitari</td>
+            </tr>
+          
+            <tr>
+              <td>LC vari</td>
+              <td>Liquidi cavitari vari</td>
+            </tr>
+          
+            <tr>
+              <td>LP</td>
+              <td>Liquido pleurico</td>
+            </tr>
+          
+            <tr>
+              <td>LS</td>
+              <td>Liquido seminale</td>
+            </tr>
+          
+            <tr>
+              <td>LSI</td>
+              <td>Liquido sinoviale</td>
+            </tr>
+          
+            <tr>
+              <td>MP</td>
+              <td>Matrice pilifera</td>
+            </tr>
+          
+            <tr>
+              <td>MV</td>
+              <td>Materiali vari</td>
+            </tr>
+          
+            <tr>
+              <td>PL</td>
+              <td>Plasma</td>
+            </tr>
+          
+            <tr>
+              <td>PL CIT</td>
+              <td>Plasma citrato</td>
+            </tr>
+          
+            <tr>
+              <td>PL EDTA</td>
+              <td>Plasma EDTA</td>
+            </tr>
+          
+            <tr>
+              <td>PL LE</td>
+              <td>Plasma litio eparina</td>
+            </tr>
+          
+            <tr>
+              <td>PUS</td>
+              <td>Pus</td>
+            </tr>
+          
+            <tr>
+              <td>S</td>
+              <td>Siero</td>
+            </tr>
+          
+            <tr>
+              <td>SI EDTA</td>
+              <td>Sangue intero EDTA</td>
+            </tr>
+          
+            <tr>
+              <td>SI LE</td>
+              <td>Sangue intero litio eparina</td>
+            </tr>
+          
+            <tr>
+              <td>SP</td>
+              <td>Secreto prostatico</td>
+            </tr>
+          
+            <tr>
+              <td>TA</td>
+              <td>Tampone auricolare</td>
+            </tr>
+          
+            <tr>
+              <td>TAT</td>
+              <td>Tempi di refertazione</td>
+            </tr>
+          
+            <tr>
+              <td>TBP</td>
+              <td>Tampone balano-prepuziale</td>
+            </tr>
+          
+            <tr>
+              <td>TCER</td>
+              <td>Tampone cervicale</td>
+            </tr>
+          
+            <tr>
+              <td>TCO</td>
+              <td>Tampone cavo orale</td>
+            </tr>
+          
+            <tr>
+              <td>TF</td>
+              <td>Tampone faringeo</td>
+            </tr>
+          
+            <tr>
+              <td>TG</td>
+              <td>Tampone con gel</td>
+            </tr>
+          
+            <tr>
+              <td>TL</td>
+              <td>Tampone linguale</td>
+            </tr>
+          
+            <tr>
+              <td>TR</td>
+              <td>Tampone rettale</td>
+            </tr>
+          
+            <tr>
+              <td>TS</td>
+              <td>Tampone a secco</td>
+            </tr>
+          
+            <tr>
+              <td>TU</td>
+              <td>Tampone uretrale</td>
+            </tr>
+          
+            <tr>
+              <td>TV</td>
+              <td>Tampone vaginale</td>
+            </tr>
+          
+            <tr>
+              <td>TVU</td>
+              <td>Tampone vulvare</td>
+            </tr>
+          
+            <tr>
+              <td>U</td>
+              <td>Urine</td>
+            </tr>
+          
+            <tr>
+              <td>U 24H</td>
+              <td>Urine 24 ore</td>
+            </tr>
+          
+            <tr>
+              <td>U 24H A.</td>
+              <td>Urine 24 ore acidificate</td>
+            </tr>
+          
+            <tr>
+              <td>U C.</td>
+              <td>Urine congelate</td>
+            </tr>
+          
+            <tr>
+              <td>U5H</td>
+              <td>Urine 5 ore</td>
+            </tr>
+          
+            <tr>
+              <td>UCE</td>
+              <td>Urine campione estemporaneo</td>
+            </tr>
+          
+            <tr>
+              <td>UFT</td>
+              <td>Urine fine turno</td>
+            </tr>
+          
+            <tr>
+              <td>UIT</td>
+              <td>Urine inizio turno</td>
+            </tr>
+          
+            <tr>
+              <td>UM</td>
+              <td>Urine del mattino</td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
   </div>
+
+  <!-- METODI -->
+  <button class="legend-toggle" type="button" data-target="legend-metodi">
+    <span>Legenda Metodi</span>
+    <span class="legend-toggle-icon">+</span>
+  </button>
+
+  <div id="legend-metodi" class="legend-panel">
+    <div class="legenda-box" aria-labelledby="legenda-metodi">
+      <h2 id="legenda-metodi">
+        Legenda Metodi
+        
+        <span class="legend-count">(45 voci)</span>
+      </h2>
+
+      <input type="text" id="legendMetodiSearch" class="legend-search" placeholder="🔍 Cerca un metodo per sigla o descrizione..." aria-label="Cerca nella legenda metodi" />
+
+      <table class="legenda-table" id="legendMetodiTable">
+        <thead>
+          <tr>
+            <th>Sigla</th>
+            <th>Metodo</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          
+            <tr>
+              <td>AA</td>
+              <td>Assorbimento atomico</td>
+            </tr>
+          
+            <tr>
+              <td>AGG</td>
+              <td>Agglutinazione</td>
+            </tr>
+          
+            <tr>
+              <td>BM</td>
+              <td>Biologia molecolare</td>
+            </tr>
+          
+            <tr>
+              <td>C</td>
+              <td>Cromatografico</td>
+            </tr>
+          
+            <tr>
+              <td>CAL DER</td>
+              <td>Calcolo derivato</td>
+            </tr>
+          
+            <tr>
+              <td>CAP</td>
+              <td>Capillare</td>
+            </tr>
+          
+            <tr>
+              <td>CFR</td>
+              <td>Fissazione del complemento</td>
+            </tr>
+          
+            <tr>
+              <td>CIN</td>
+              <td>Cinetico</td>
+            </tr>
+          
+            <tr>
+              <td>CLIA</td>
+              <td>Chemiluminescenza</td>
+            </tr>
+          
+            <tr>
+              <td>CLIA I</td>
+              <td>CLIA indiretta</td>
+            </tr>
+          
+            <tr>
+              <td>CLIA S</td>
+              <td>CLIA sandwich</td>
+            </tr>
+          
+            <tr>
+              <td>CO</td>
+              <td>Colorimetrico</td>
+            </tr>
+          
+            <tr>
+              <td>COL</td>
+              <td>Colturale</td>
+            </tr>
+          
+            <tr>
+              <td>CROM</td>
+              <td>Cromogenico</td>
+            </tr>
+          
+            <tr>
+              <td>ECLIA</td>
+              <td>Elettrochemiluminescenza</td>
+            </tr>
+          
+            <tr>
+              <td>ECM</td>
+              <td>Elettrochemioluminescenza</td>
+            </tr>
+          
+            <tr>
+              <td>EIA</td>
+              <td>Immunoenzimatico</td>
+            </tr>
+          
+            <tr>
+              <td>EID</td>
+              <td>Elettroimmunodiffusione</td>
+            </tr>
+          
+            <tr>
+              <td>EMOAGG IN P.</td>
+              <td>Emoagglutinazione in provetta</td>
+            </tr>
+          
+            <tr>
+              <td>ENZ</td>
+              <td>Enzimatico</td>
+            </tr>
+          
+            <tr>
+              <td>FIA</td>
+              <td>Immunofluorescenza amplificata</td>
+            </tr>
+          
+            <tr>
+              <td>GAS C</td>
+              <td>Gas cromatografia</td>
+            </tr>
+          
+            <tr>
+              <td>GC</td>
+              <td>Gascromatografia</td>
+            </tr>
+          
+            <tr>
+              <td>IMB</td>
+              <td>Immunoblotting</td>
+            </tr>
+          
+            <tr>
+              <td>IMMCR</td>
+              <td>Immunocromatografia</td>
+            </tr>
+          
+            <tr>
+              <td>IMMENZ</td>
+              <td>Immunoenzimatico</td>
+            </tr>
+          
+            <tr>
+              <td>IMMN</td>
+              <td>Immunonefelometria</td>
+            </tr>
+          
+            <tr>
+              <td>IMMT</td>
+              <td>Immunoturbidimetrico</td>
+            </tr>
+          
+            <tr>
+              <td>KIMS</td>
+              <td>Kinetic Interaction of Microparticles in Solution</td>
+            </tr>
+          
+            <tr>
+              <td>LC</td>
+              <td>Cromatografia liquida</td>
+            </tr>
+          
+            <tr>
+              <td>LFT</td>
+              <td>Immunocromatografico a flusso laterale</td>
+            </tr>
+          
+            <tr>
+              <td>MFI</td>
+              <td>Multiplex immunometrico</td>
+            </tr>
+          
+            <tr>
+              <td>MIC</td>
+              <td>Microscopia</td>
+            </tr>
+          
+            <tr>
+              <td>MIC FLUO</td>
+              <td>Microscopia in fluorescenza</td>
+            </tr>
+          
+            <tr>
+              <td>MS</td>
+              <td>Spettrometria di massa</td>
+            </tr>
+          
+            <tr>
+              <td>NEF</td>
+              <td>Nefelometria</td>
+            </tr>
+          
+            <tr>
+              <td>PETINA</td>
+              <td>Test immunologico di inibizione turbidimetrica con particelle</td>
+            </tr>
+          
+            <tr>
+              <td>POT</td>
+              <td>Potenziometrico</td>
+            </tr>
+          
+            <tr>
+              <td>Q</td>
+              <td>Qualitativo</td>
+            </tr>
+          
+            <tr>
+              <td>QQ</td>
+              <td>Quantitativo</td>
+            </tr>
+          
+            <tr>
+              <td>RIP</td>
+              <td>Reverse Immunoprecipitation</td>
+            </tr>
+          
+            <tr>
+              <td>RT PCR</td>
+              <td>Real Time PCR</td>
+            </tr>
+          
+            <tr>
+              <td>S</td>
+              <td>Spettrometria</td>
+            </tr>
+          
+            <tr>
+              <td>SPET</td>
+              <td>Metodo spettrofotometrico</td>
+            </tr>
+          
+            <tr>
+              <td>WB</td>
+              <td>Western blot</td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
 
   <div id="resultsInfo" class="results-info" aria-live="polite"></div>
 
@@ -8340,7 +8829,7 @@
 
     const from = total ? start + 1 : 0;
     const to = Math.min(end, total);
-    resultsInfo.textContent = `${total} risultato${total===1?'':'i'} — mostrando ${from}-${to}`;
+    resultsInfo.textContent = `${total} risultat${total===1?'o':'i'} — mostrando ${from}-${to}`;
 
     buildPagination(pagTop, totalPages);
     buildPagination(pagBottom, totalPages);
@@ -8418,7 +8907,116 @@
 })();
 </script>
 
+<script>
+(function(){
+  // Toggle pannelli legenda (accordion)
+  const legendToggles = document.querySelectorAll(".legend-toggle");
+
+  legendToggles.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const targetId = btn.dataset.target;
+      const panel = document.getElementById(targetId);
+      if (!panel) return;
+
+      const isOpen = panel.classList.contains("open");
+
+      // chiudi tutti
+      document.querySelectorAll(".legend-panel").forEach(p => p.classList.remove("open"));
+      document.querySelectorAll(".legend-toggle").forEach(b => b.classList.remove("open"));
+
+      // riapri solo quello cliccato se era chiuso
+      if (!isOpen) {
+        panel.classList.add("open");
+        btn.classList.add("open");
+      }
+    });
+  });
+
+  // Ricerca interna nelle tabelle legenda
+  function setupLegendSearch(inputId, tableId) {
+    const input = document.getElementById(inputId);
+    const table = document.getElementById(tableId);
+    if (!input || !table) return;
+
+    const rows = Array.from(table.querySelectorAll("tbody tr"));
+
+    input.addEventListener("input", () => {
+      const q = input.value.toLowerCase().trim();
+      rows.forEach(tr => {
+        const text = tr.textContent.toLowerCase();
+        tr.style.display = text.includes(q) ? "" : "none";
+      });
+    });
+  }
+
+  setupLegendSearch("legendCampioniSearch", "legendCampioniTable");
+  setupLegendSearch("legendMetodiSearch", "legendMetodiTable");
+})();
+</script>
+
 <style>
+
+  .legend-accordion {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Pulsante che apre/chiude la sezione */
+.legend-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--color-base-bg-3, #d9ead9);
+  background: var(--color-base-bg-2, #f0faf0);
+  color: var(--color-base-text, #2d6a2d);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .15s ease, box-shadow .15s ease, transform .1s ease;
+}
+.legend-toggle:hover {
+  background: var(--color-base-bg-3, #e3f3e3);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.legend-toggle.open {
+  background: var(--color-primary-bg, #3d8b3d);
+  color: var(--color-primary-text, #ffffff);
+}
+.legend-toggle-icon {
+  font-weight: 700;
+}
+.legend-toggle.open .legend-toggle-icon {
+  content: "-";
+}
+
+/* Contenuto a scomparsa */
+.legend-panel {
+  display: none;
+}
+.legend-panel.open {
+  display: block;
+}
+
+/* Barra di ricerca interna alla legenda */
+.legend-search {
+  width: 100%;
+  margin: 8px 0 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--color-base-bg-3, #d9ead9);
+  background: var(--color-base-bg, #ffffff);
+  font-size: 14px;
+}
+.legend-search::placeholder {
+  color: var(--color-base-text-2, #4b7a4b);
+}
+
 .content-wrapper {
   max-width: 980px;
   margin: 0 auto;
@@ -8450,19 +9048,57 @@
   box-shadow: 0 0 0 3px rgba(61,139,61,0.2);
 }
 
+/* Selector "Per pagina" – versione moderna, coerente col tema */
 .page-size {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  color: #2d6a2d;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--color-base-bg-2);
+  border: 1px solid var(--color-base-bg-3);
+  font-size: 14px;
+  color: var(--color-base-text-2);
 }
 
-.page-size select {
-  padding: 8px 10px;
-  border: 1px solid #c8e6c9;
-  border-radius: 8px;
-  background: #fff;
+.page-size label {
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-base-text-2);
 }
+
+/* Wrapper per customizzare il select */
+.page-size select {
+  border: none;
+  background: transparent;
+  padding: 4px 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-base-text);
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Piccola freccia “custom” usando background SVG */
+.page-size select {
+  padding-right: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 2px center;
+  background-size: 12px 8px;
+}
+
+/* Hover/focus */
+.page-size:hover {
+  border-color: var(--color-primary-bg);
+}
+.page-size select:focus-visible {
+  outline: none;
+}
+
 
 .legenda-box {
   background: #f0faf0;

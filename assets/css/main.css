@@ -40,6 +40,155 @@ html[data-bs-theme=dark] {
   --color-header-text: #F4F4F5;
 }
 
+/* --------------------------------------------- */
+/*   TABELLE STILIZZATE (LIGHT + DARK MODE)      */
+/*   - header verde                              */
+/*   - zebra rows                                */
+/*   - bordi arrotondati + ombra                 */
+/* --------------------------------------------- */
+.wide-table-wrapper {
+  overflow-x: hidden; /* niente scroll orizzontale */
+  margin: 1.5rem 0;
+}
+
+/* Tabella base */
+.wide-table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: separate; /* necessario per border-radius pulito */
+  border-spacing: 0;
+  background: var(--color-base-bg);
+  color: var(--color-base-text);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.1); /* ombra soft */
+}
+
+/* Celle comuni */
+.wide-table th,
+.wide-table td {
+  border: 1px solid var(--color-base-text-2);
+  padding: 10px 14px;
+  text-align: left;
+}
+
+/* Celle normali: testo va a capo */
+.wide-table td {
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Intestazioni: colore + no wrap */
+.wide-table th {
+  background: #AEC867; /* verde da immagine */
+  color: #111827; /* testo scuro leggibile */
+  font-weight: 600;
+  white-space: nowrap; /* niente a capo nelle intestazioni */
+}
+
+/* Zebra rows (solo sul tbody, non sull'header) */
+.wide-table tbody tr:nth-child(even) {
+  background: var(--color-base-bg-2);
+}
+
+/* Angoli arrotondati perfetti */
+.wide-table thead tr:first-child th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.wide-table thead tr:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+
+.wide-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+.wide-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+/* --------------------------------------------- */
+/*                  DARK MODE                    */
+/* --------------------------------------------- */
+html[data-bs-theme=dark] .wide-table {
+  background: var(--color-base-bg-2);
+  color: var(--color-base-text);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+html[data-bs-theme=dark] .wide-table th {
+  background: #607631; /* verde più scuro per dark */
+  color: #F4F4F5;
+  white-space: nowrap;
+}
+
+html[data-bs-theme=dark] .wide-table td,
+html[data-bs-theme=dark] .wide-table th {
+  border: 1px solid var(--color-base-text-2);
+}
+
+/* Zebra in dark mode */
+html[data-bs-theme=dark] .wide-table tbody tr:nth-child(even) {
+  background: var(--color-base-bg-3);
+}
+
+/* === ALERT IMPORTANTE — VERSIONE ELEGANTE LIGHT/DARK === */
+.alert-important {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin: 18px 0;
+  padding: 14px 16px 14px 44px;
+  border-radius: 12px;
+  border: 1px solid var(--color-base-bg-3);
+  background: linear-gradient(135deg, rgba(255, 243, 205, 0.9), rgba(255, 255, 255, 0.95));
+  color: #5a4600;
+  font-size: 15px;
+  line-height: 1.5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* Icona circolare a sinistra */
+.alert-important::before {
+  content: "!";
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0ad4e;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Testo evidenziato dentro l'alert */
+.alert-important strong {
+  font-weight: 700;
+}
+
+/* === DARK MODE === */
+html[data-bs-theme=dark] .alert-important {
+  border-color: rgba(255, 214, 102, 0.4);
+  background: linear-gradient(135deg, rgba(82, 61, 15, 0.95), rgba(30, 22, 6, 0.98));
+  color: #fcefb4;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+}
+
+html[data-bs-theme=dark] .alert-important::before {
+  background: #d39e32;
+  color: #1a1304;
+  box-shadow: 0 0 0 2px rgba(26, 19, 4, 0.9);
+}
+
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
