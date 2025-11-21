@@ -189,6 +189,84 @@ html[data-bs-theme=dark] .alert-important::before {
   box-shadow: 0 0 0 2px rgba(26, 19, 4, 0.9);
 }
 
+.kobiol-slider {
+  position: relative;
+  max-width: 800px;
+  margin: 30px auto 40px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.kobiol-slider-inner img {
+  width: 100%;
+  display: none;
+}
+
+.kobiol-slider-inner img.kobiol-slide-active {
+  display: block;
+}
+
+.kobiol-slider-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+.kobiol-slider-arrow {
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  font-size: 20px;
+}
+
+.kobiol-slider-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.kobiol-slider-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+.kobiol-slider-dot.kobiol-slider-dot-active {
+  background: #ffffff;
+}
+
+.kobiol-slide-fade {
+  animation: kobiolFade 1s ease-in-out;
+}
+
+@keyframes kobiolFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
