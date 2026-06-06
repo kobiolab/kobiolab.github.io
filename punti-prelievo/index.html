@@ -11,7 +11,7 @@
 
 
     <meta property="og:type" content="website"/>
-<meta property="og:url" content="https://kobiolab.github.io//punti-prelievo/"/>
+<meta property="og:url" content="https://www.kobiol.it/punti-prelievo/"/>
 
 
   <meta property="og:title" content="Punti Prelievo"/>
@@ -639,7 +639,7 @@
 
   <!-- Dati embedded da _data/. -->
   <script id="pp-data" type="application/json">
-    [{"id":"pp-arena-metato","name":"Punto Prelievi Arena Metato","address":"Edificio Pubblica Assistenza S.R. Pisa - Arena Metato, Via Filippo Turati 23/B, 56017 Arena Metato, San Giuliano Terme (PI)","city":"San Giuliano Terme","hours":"Giovedì 8:00 - 9:30","phone":"050-811188","lat":43.7567,"lon":10.3605,"services":[]},{"id":"pp-migliarino","name":"Punto Prelievi Migliarino","address":"Edificio Pubblica Assistenza S.R. Pisa - Migliarino, Via Renato Fucini 61, 56019 Migliarino (PI)","city":"Migliarino Pisano","hours":"Mercoledì 8:00 - 9:30","phone":"050-804053","lat":43.7692,"lon":10.3431,"services":[]},{"id":"pp-livorno-svs","name":"Punto Prelievi SVS Polo Salute Livorno","address":"Edificio SVS Polo Salute - Livorno, Via San Giovanni 30, 57123 Livorno (LI)","city":"Livorno","hours":null,"phone":"0586-896040","lat":43.55177,"lon":10.30559,"services":[]}]
+    [{"id":"laboratorio-kobiol","name":"Laboratorio Kobiol","address":"Via Armando Diaz 6, 56123, Pisa (PI)","city":"Pisa","hours_apertura":"Lun-Ven 7:00 - 17:00 | Sab 7:00 - 12:00","hours_prelievi":"Lun-Ven 7:00 - 12:00 | Sab 7:00 - 10:00","phone":"050-564475","lat":43.72971181661956,"lon":10.406052654890809,"services":[]},{"id":"pp-arena-metato","name":"Punto Prelievi Arena Metato","address":"Edificio Pubblica Assistenza S.R. Pisa - Arena Metato, Via Filippo Turati 23/B, 56017 Arena Metato, San Giuliano Terme (PI)","city":"San Giuliano Terme","hours_apertura":"Giovedì 8:00 - 9:30","hours_prelievi":null,"phone":"050-811188","lat":43.7567,"lon":10.3605,"services":[]},{"id":"pp-migliarino","name":"Punto Prelievi Migliarino","address":"Edificio Pubblica Assistenza S.R. Pisa - Migliarino, Via Renato Fucini 61, 56019 Migliarino (PI)","city":"Migliarino Pisano","hours_apertura":"Mercoledì 8:00 - 9:30","hours_prelievi":null,"phone":"050-804053","lat":43.7692,"lon":10.3431,"services":[]},{"id":"pp-livorno-svs","name":"Punto Prelievi SVS Polo Salute Livorno","address":"Edificio SVS Polo Salute - Livorno, Via San Giovanni 30, 57123 Livorno (LI)","city":"Livorno","hours_apertura":null,"hours_prelievi":null,"phone":"0586-896040","lat":43.55177,"lon":10.30559,"services":[]}]
   </script>
 
   <div id="pp-status" class="pp-status warn" role="status" aria-live="polite">Inizializzo…</div>
@@ -734,7 +734,8 @@
     m.bindPopup(`
       <strong>${p.name || ''}</strong><br/>
       ${(p.address || '')}${p.city ? ' — ' + p.city : ''}<br/>
-      ${p.hours ? '🕒 ' + p.hours + '<br/>' : ''}
+      ${p.hours_apertura ? '🏢 <strong>Apertura:</strong> ' + p.hours_apertura + '<br/>' : ''}
+      ${p.hours_prelievi ? '🩸 <strong>Prelievi:</strong> ' + p.hours_prelievi + '<br/>' : ''}
       ${p.phone ? '📞 ' + p.phone + '<br/>' : ''}
       ${services}
     `);
@@ -767,7 +768,8 @@
       el.innerHTML = `
         <h3>${p.name || ''}</h3>
         <div class="pp-meta">${p.address || ''}${p.city ? ' — ' + p.city : ''}</div>
-        ${p.hours ? `<div class="pp-meta">🕒 ${p.hours}</div>` : ''}
+        ${p.hours_apertura ? `<div class="pp-meta">🏢 <strong>Apertura:</strong> ${p.hours_apertura}</div>` : ''}
+        ${p.hours_prelievi ? `<div class="pp-meta">🩸 <strong>Prelievi:</strong> ${p.hours_prelievi}</div>` : ''}
         ${p.phone ? `<div class="pp-meta">📞 ${p.phone}</div>` : ''}
         <div class="pp-badges">${(p.services || []).map(s => `<span class='pp-badge'>${s}</span>`).join('')}</div>
       `;
@@ -934,6 +936,10 @@
         <a href="/carta-dei-servizi/">Carta dei Servizi</a>
       </li>
     
+      <li class="">
+        <a href="/politica-per-la-qualita/">Politica per la qualità</a>
+      </li>
+    
   </ul>
 </div>
 
@@ -1001,13 +1007,9 @@
         
         
         
-          <div class="copyright">© 2025 Kobiol S.r.l.</div>
+          <div class="copyright">© 2026 Kobiol S.r.l. - P.IVA 00225160506</div>
         
         
-        
-          <a class="feed" href="https://kobiolab.github.io//feed.xml">
-            <i class="fas fa-feed"></i>
-          </a>
         
         
       </div>
